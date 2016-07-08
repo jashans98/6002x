@@ -378,12 +378,12 @@ def showPlot2(title, x_label, y_label):
 #     plot.
 #
 #       (... your call here ...)
-#showPlot1('Robot Simulation', 'Number of Robots', 'Time Steps')
+# showPlot1('Comparison between Standard and RandomWalk Robot', 'Number of Robots', 'Time Steps')
 #
 
 #
 # 2) Write a function call to showPlot2 that generates an appropriately-labeled
 #     plot.
 #
-showPlot2('Robot Simulation', 'aspect ratio (x:y)', 'time steps')
+showPlot2('Aspect Ratio Analysis (1 robot)', 'aspect ratio (x:y)', 'time steps')
 #
