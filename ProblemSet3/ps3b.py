@@ -155,6 +155,7 @@ class Patient(object):
         """
 
         newL = []
+        # remove viruses that clear
         for virus in self.viruses:
             if not virus.doesClear():
                 newL.append(virus)
@@ -162,6 +163,7 @@ class Patient(object):
         self.viruses = newL
         density = len(self.viruses) / float(self.maxPop)
         
+        # now reproduce the viruses
         extras = []
         for virus in self.viruses:
             try:
@@ -213,10 +215,10 @@ def simulationWithoutDrug(numViruses = 100, maxPop = 1000,
     for i in range(300):
         res[i] = res[i]/float(numTrials)
         
-    pylab.title('SimpleVirus Simulation')
+    pylab.title('Simple Virus Growth over Time (no drugs)')
     pylab.plot(res, label='Number of Virus instances')
     pylab.xlabel('Tme Steps')
-    pylab.ylabel('Average Virus Population')
+    pylab.ylabel('Average Virus Population in Patient')
     pylab.legend()
     pylab.show()
     
@@ -541,11 +543,11 @@ def simulationWithDrug(numViruses=100, maxPop=1000, maxBirthProb=0.1, clearProb 
         rResist[i] /= float(numTrials)
         
     #make the total plot
-    pylab.plot(rViruses, label = 'Total Population')
+    pylab.plot(rViruses, label = 'Total Virus Population')
     #make the resistant plot
-    pylab.title('ResistantVirus simulation')
-    pylab.xlabel('time step')
-    pylab.ylabel('# viruses')
+    pylab.title('Virus Growth with Drugs (added after 150 time steps)')
+    pylab.xlabel('Time steps')
+    pylab.ylabel('Number of Viruses')
     pylab.plot(rResist, label='Resistant Population')
     pylab.legend()
     pylab.show()
