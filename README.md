@@ -1,18 +1,30 @@
-# 6002x
+# MIT 6.00.2x: Introduction to Computational Thinking and Data Science
 A collection of problem sets solved for MIT's Introduction to Computational Thinking and Data Science course on edX.
 This was the fall 2015 course. Over the course of six weeks, I learned the foundations of graphs, modelling, 
 and conducting simulations using Python's Pylab package. Below, you can find descriptions of some of the more interesting problem sets.
 
 ### Problem Set 2
 This was perhaps the most fun assignment of the entire course. As an introduction to models and simulations, I compared the performance
-of two different kinds of vacuum cleaning robots using the [Monte Carlo method](https://en.wikipedia.org/wiki/Monte_Carlo_method)
+of two different kinds of vacuum cleaning robots via the [Monte Carlo method](https://en.wikipedia.org/wiki/Monte_Carlo_method)
 (which involves using randomness to solve problems that may be deterministic in principle). 
-The model was extended to analyze the impacts of room dimensions and the presence of multiple robots running concurrently. 
+The model was then used to analyze the impacts of room dimensions and the presence of multiple robots running concurrently on 
+the total time taken to clean the room.
+
+You can find the final plots examining the results inside the problem set folder. The StandardRobot was much more efficient 
+overall, and less prone to changes in aspect ratio. 
 
 ### Problem Set 3
-This problem set required me to build a simplified model used to analyze the lifecycle and evolution of viruses in patient's body. Using 
-this model, I understood how quickly different viruses spread around the body, and how they may evolve to develop resistances to certain
-drugs. I additionally plotted graphs to understand the various distributions further. 
+This problem set required me to build a simplified model used to analyze the lifecycle and evolution of viruses in patient's body. 
+Using this model, I understood how quickly different viruses spread around the body, and how they may evolve 
+to develop resistances to certain drugs. I additionally plotted graphs to understand the various distributions further. Once again, 
+you can find them inside the project folder.  
+
+`simple_virus_growth.png` shows growth without any drugs. For a patient with a maximum population of 1000 units of virus, the population stabilizes around 500. The number will change depending on the probability that a virus clears or reproduces at a given time step.    
+
+`drug_virus_growth.png` handles the more complex and realistic case when a virus is able to develop a resistance to certain drugs. 
+For a total of 300 time steps, the total units of viruses, and total units of resistant viruses have been plotted. Drugs are added
+at the 150th time step and, almost immediately, the number of non-resistant viruses drops until most of the viruses left are all
+resistant. 
 
 ### Problem Set 4
 Essentially an extension of problem set 3. I built upon the existing virus, drug, and patient models to run new simulations and 
